@@ -24,7 +24,16 @@ container:{
     borderRadius:10,
     backgroundColor:COLORS.green,
     alignItems:'center',
-    justifyContent:'center'
+    justifyContent:'center',
+    shadowColor: "#037F00",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
    
 },
 Txt:{
