@@ -1,31 +1,18 @@
-import { View, Text, StyleSheet,TouchableOpacity, Image, Pressable} from 'react-native'
+import { View, Text, StyleSheet} from 'react-native'
 import React from 'react'
-import ombThree from '../assets/ob3.png'
-import { AntDesign } from '@expo/vector-icons'; 
 
 
 import {FONT,COLORS} from '../constant/theme'
-import SmallButton from '../Components/SmallButton';
 import TextBox from '../Components/TextBox';
 import BigButton from '../Components/BigButton';
 import HorizontalRule from '../Components/HorizontalRule';
 import SocialIcons from '../Components/SocialIcons';
 
-const SignUp = () => {
+const SignIn = () => {
   return (
     <View style={styles.container}>
-        <TextBox
-        placeholder={'Ritzy'}
-        icon={'person-circle-outline'}
-        />
-        <TextBox
-        placeholder={'UserName'}
-        icon={'person-circle-outline'}
-        />
-        <TextBox
-        placeholder={'Email'}
-        icon={'mail-open-outline'}
-        />
+      
+      
         <TextBox
         placeholder={'Phone Number'}
         icon={'md-call-outline'}
@@ -34,10 +21,7 @@ const SignUp = () => {
         placeholder={'Password'}
         icon={'md-lock-closed-outline'}
         />
-        <TextBox
-        placeholder={'Location'}
-        icon={'location-outline'}
-        />
+        
         
         <BigButton
         title={'Create Account'}
@@ -59,7 +43,7 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default SignIn
 
 const styles = StyleSheet.create({
 container:{

@@ -9,6 +9,7 @@ import OnBoardingOne from './Screens/OnBoardingOne';
 import OnBoardingTwo from './Screens/OnBoardingTwo';
 import OnBoardingThree from './Screens/OnBoardingThree';
 import SignUp from './Screens/SignUp';
+import SignIn from './Screens/Signin';
 
 export default function App() {
   let [fontsLoaded] = useFonts({ Montserrat_400Regular,  Montserrat_500Medium, Montserrat_700Bold,Montserrat_600SemiBold });
@@ -23,7 +24,8 @@ export default function App() {
       {/* <OnBoardingOne/> */}
       {/* <OnBoardingTwo/> */}
       {/* <OnBoardingThree/> */}
-      <SignUp/>
+      {/* <SignUp/> */}
+      <SignIn/>
       <StatusBar style="auto" />
     </View>
     </SafeAreaView>
