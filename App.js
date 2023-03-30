@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text,Platform, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
+
+
 
 import AppLoading from 'expo-app-loading';
 import { useFonts,Montserrat_400Regular,  Montserrat_500Medium,Montserrat_600SemiBold, Montserrat_700Bold,} from '@expo-google-fonts/montserrat';
-
-import OnBoardingOne from './Screens/OnBoardingOne';
-import OnBoardingTwo from './Screens/OnBoardingTwo';
-import OnBoardingThree from './Screens/OnBoardingThree';
-import SignUp from './Screens/SignUp';
-import SignIn from './Screens/Signin';
+import MyStack from './Navigation/MainNav';
+import { COLORS } from './constant/theme';
+// import SignUp from './Screens/SignUp';
 
 export default function App() {
   let [fontsLoaded] = useFonts({ Montserrat_400Regular,  Montserrat_500Medium, Montserrat_700Bold,Montserrat_600SemiBold });
@@ -18,17 +18,17 @@ export default function App() {
     return null;
   } else {
   return (
-    <SafeAreaView>
-    <View >
+    <NavigationContainer>
+       
+       <MyStack>
+       
+       </MyStack>
+          
+            
+          <StatusBar style="auto" />
+        
 
-      {/* <OnBoardingOne/> */}
-      {/* <OnBoardingTwo/> */}
-      {/* <OnBoardingThree/> */}
-      {/* <SignUp/> */}
-      <SignIn/>
-      <StatusBar style="auto" />
-    </View>
-    </SafeAreaView>
+      </NavigationContainer>
   );
 }
 }

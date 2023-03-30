@@ -5,13 +5,20 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 import {FONT,COLORS} from '../constant/theme'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const OnBoardingOne = () => {
-  return (
+const OnBoardingOne = ({navigation}) => {
+  return (  
+     <SafeAreaView>
+
+    
     <View style={styles.container}>
         
         <View>
-            <TouchableOpacity>
+            <TouchableOpacity
+             onPress={()=> navigation.navigate('Sign Up')}
+
+            >
       <Text style={{textAlign:'right', fontFamily:FONT.bold, color:COLORS.green}}>Skip</Text>
             </TouchableOpacity>
             <Image
@@ -30,7 +37,10 @@ const OnBoardingOne = () => {
                 <View style={styles.dotGray}/>
             </View>
 
-                <TouchableOpacity style={{marginTop:25,}}>
+                <TouchableOpacity
+                 style={{marginTop:25,}} 
+                onPress={()=> navigation.navigate('Onboarding Two')}
+>
 
                 <AntDesign name="rightcircle" size={60} color={COLORS.green} />
                 </TouchableOpacity>
@@ -41,6 +51,7 @@ const OnBoardingOne = () => {
 
         
     </View>
+</SafeAreaView>
   )
 }
 

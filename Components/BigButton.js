@@ -4,10 +4,10 @@ import React from 'react'
 
 import {FONT,COLORS} from '../constant/theme'
 
-const BigButton = ({title,Onpress}) => {
+const BigButton = ({title,onPress}) => {
   return (
     <TouchableOpacity
-    onPress={Onpress}
+    onPress={onPress}
     style={styles.container}>
       <Text style={styles.Txt}>{title}</Text>
     </TouchableOpacity>
@@ -38,6 +38,7 @@ container:{
    
 },
 Txt:{
+  fontSize:14,
 fontFamily:FONT.semiBold,
 color:COLORS.white
 }

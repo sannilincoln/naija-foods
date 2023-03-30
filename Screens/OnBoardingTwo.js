@@ -5,18 +5,24 @@ import { AntDesign } from '@expo/vector-icons';
 
 
 import {FONT,COLORS} from '../constant/theme'
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const OnBoardingTwo = () => {
+const OnBoardingTwo = ({navigation}) => {
   return (
+    <SafeAreaView>
     <View style={styles.container}>
         
         <View>
             <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={()=> navigation.goBack()}
+        >
         <AntDesign name="arrowleft" size={24} color={COLORS.green} />
         </TouchableOpacity>
-        <TouchableOpacity>
-    <Text style={{ fontFamily:FONT.bold, color:COLORS.green}}>Skip</Text>
+            <TouchableOpacity
+             onPress={()=> navigation.navigate('Sign Up')}
+            >  
+              <Text style={{ fontFamily:FONT.bold, color:COLORS.green}}>Skip</Text>
         </TouchableOpacity>
 
             </View>
@@ -36,7 +42,9 @@ const OnBoardingTwo = () => {
                 <View style={styles.dotGray}/>
             </View>
 
-                <TouchableOpacity style={{marginTop:25,}}>
+                <TouchableOpacity style={{marginTop:25,}}
+                onPress={()=> navigation.navigate('Onboarding Three')}
+                >
 
                 <AntDesign name="rightcircle" size={60} color={COLORS.green} />
                 </TouchableOpacity>
@@ -47,6 +55,7 @@ const OnBoardingTwo = () => {
 
         
     </View>
+    </SafeAreaView>
   )
 }
 

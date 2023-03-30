@@ -7,11 +7,15 @@ import TextBox from '../Components/TextBox';
 import BigButton from '../Components/BigButton';
 import HorizontalRule from '../Components/HorizontalRule';
 import SocialIcons from '../Components/SocialIcons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SignIn = () => {
   return (
+    <SafeAreaView>
+
     <View style={styles.container}>
-      
+      <Text style={{fontFamily:FONT.semiBold,fontSize:16,color:COLORS.black,marginVertical:6}}>
+            Create an account</Text>
       
         <TextBox
         placeholder={'Phone Number'}
@@ -24,22 +28,29 @@ const SignIn = () => {
         
         
         <BigButton
-        title={'Create Account'}
+        title={'Sign in'}
         />
+
+        <Text style={styles.textf}>Forgot password?</Text>
+
+
         <HorizontalRule/>
 
         <SocialIcons/>
 
-        <View >
-            <Text style={styles.txt}>Already registered? 
+        <View style={{marginTop:150}}>
+            <Text style={styles.txt}>Not registered yet ?  
 
-                <Text style={styles.signIn} > Sign in</Text>
+                <Text style={styles.signIn} > Sign up</Text>
             
             </Text>
 
         </View>
         
     </View>
+
+    </SafeAreaView>
+
   )
 }
 
@@ -48,23 +59,22 @@ export default SignIn
 const styles = StyleSheet.create({
 container:{
     // flex:1,
-    marginTop:50,
+    marginTop:100,
     // marginVertical: 25,
-    justifyContent:'center',
+    // justifyContent:'center',
     alignItems:'center'
 },
 
-image:{
-height:384,
-marginVertical:15,
-// marginHorizontal:
-},
 
-textB:{
-fontSize:24,
-fontFamily:FONT.bold,
-color:COLORS.black,
-marginVertical:15
+
+textf:{
+// fontSize:15,
+fontFamily:FONT.medium,
+color:COLORS.red,
+marginLeft:210,
+marginBottom:70
+
+// marginVertical:15
 },
 
 textp:{
@@ -77,7 +87,7 @@ textp:{
 },
 txt:{
     // marginVertical:15,
-    fontFamily:FONT.regular,
+    fontFamily:FONT.medium,
     textAlign:'center',
     fontSize:14,
     color:COLORS.black,

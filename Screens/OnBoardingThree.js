@@ -6,14 +6,17 @@ import { AntDesign } from '@expo/vector-icons';
 
 import {FONT,COLORS} from '../constant/theme'
 import SmallButton from '../Components/SmallButton';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const OnBoardingThree = () => {
+const OnBoardingThree = ({navigation}) => {
   return (
+    <SafeAreaView>
     <View style={styles.container}>
         
         <View>
             <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
-        <TouchableOpacity>
+        <TouchableOpacity  onPress={()=> navigation.goBack()}
+>
         <AntDesign name="arrowleft" size={24} color={COLORS.green} />
         </TouchableOpacity>
         {/* <TouchableOpacity>
@@ -40,7 +43,8 @@ const OnBoardingThree = () => {
                 <View style={{marginTop:25,}}>
                     <SmallButton
                         title={'Get Started'}
-                        Onpress={() => console.log('hdfk')}
+                        onpress={() => navigation.navigate('Sign Up')}
+
                     />
                 </View>
             </View>
@@ -50,6 +54,9 @@ const OnBoardingThree = () => {
 
         
     </View>
+
+    </SafeAreaView>
+
   )
 }
 

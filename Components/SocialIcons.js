@@ -12,10 +12,10 @@ const SocialIcons = () => {
         <TouchableOpacity style={styles.box}>
         <Image source={google} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.box1}>
+        <TouchableOpacity style={styles.boxf}>
         <Image source={facebook} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.box2}>
+        <TouchableOpacity style={styles.boxa}>
         <Image source={apple} />
         </TouchableOpacity>
 
@@ -41,10 +41,10 @@ const styles = StyleSheet.create({
         marginHorizontal:15
 
     },
-    box1:{
+    boxf:{
         height:40,
         width:40,
-        borderWidth:1,
+        // borderWidth:1,
         borderColor:COLORS.black,
         justifyContent:'center',
         alignItems:'center',
@@ -54,10 +54,10 @@ const styles = StyleSheet.create({
 
     
     },
-    box2:{
+    boxa:{
         height:40,
         width:40,
-        borderWidth:1,
+        // borderWidth:1,
         borderColor:COLORS.black,
         justifyContent:'center',
         alignItems:'center',

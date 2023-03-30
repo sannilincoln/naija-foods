@@ -4,10 +4,11 @@ import React from 'react'
 
 import {FONT,COLORS} from '../constant/theme'
 
-const SmallButton = ({title,onpress}) => {
+const CatButtons = ({title,Onpress}) => {
+    
   return (
     <TouchableOpacity
-    onPress={onpress}
+    onPress={Onpress}
     style={styles.container}>
       <Text style={styles.Txt}>{title}</Text>
     </TouchableOpacity>
@@ -15,17 +16,18 @@ const SmallButton = ({title,onpress}) => {
   )
 }
 
-export default SmallButton
+export default CatButtons
 
 const styles = StyleSheet.create({
 container:{
-    height:75,
-    width:215,
+    height:34,
+    width:100,
     borderRadius:10,
     backgroundColor:COLORS.green,
     alignItems:'center',
     justifyContent:'center',
     shadowColor: "#037F00",
+    marginVertical:15,
         shadowOffset: {
             width: 0,
             height: 3,
@@ -37,6 +39,7 @@ container:{
    
 },
 Txt:{
+  fontSize:14,
 fontFamily:FONT.semiBold,
 color:COLORS.white
 }

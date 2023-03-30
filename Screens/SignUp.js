@@ -10,10 +10,14 @@ import TextBox from '../Components/TextBox';
 import BigButton from '../Components/BigButton';
 import HorizontalRule from '../Components/HorizontalRule';
 import SocialIcons from '../Components/SocialIcons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   return (
+    <SafeAreaView>
     <View style={styles.container}>
+        <Text style={{fontFamily:FONT.semiBold,fontSize:16,color:COLORS.black,marginVertical:6}}>
+            Create an account</Text>
         <TextBox
         placeholder={'Ritzy'}
         icon={'person-circle-outline'}
@@ -41,21 +45,24 @@ const SignUp = () => {
         
         <BigButton
         title={'Create Account'}
+        onPress={() => navigation.navigate('Verification')}
         />
         <HorizontalRule/>
 
         <SocialIcons/>
 
-        <View >
+        <TouchableOpacity onPress={() => navigation.navigate('Sign In')}>
             <Text style={styles.txt}>Already registered? 
 
                 <Text style={styles.signIn} > Sign in</Text>
             
             </Text>
 
-        </View>
+        </TouchableOpacity>
         
     </View>
+
+    </SafeAreaView>
   )
 }
 
@@ -93,7 +100,7 @@ textp:{
 },
 txt:{
     // marginVertical:15,
-    fontFamily:FONT.regular,
+    fontFamily:FONT.medium,
     textAlign:'center',
     fontSize:14,
     color:COLORS.black,
