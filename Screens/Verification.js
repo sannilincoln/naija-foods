@@ -16,12 +16,14 @@ const Verification = ({navigation}) => {
     <View style={styles.container}>
         
             <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
-        <TouchableOpacity>
-        <AntDesign name="arrowleft" size={30} color={COLORS.black} marginLeft={15} />
+        <TouchableOpacity onPress={()=> navigation.goBack()}>
+        <AntDesign name="arrowleft" size={30} color={COLORS.black} marginLeft={13} />
         </TouchableOpacity>
-        {/* <TouchableOpacity>
-    <Text style={{ fontFamily:FONT.bold, color:COLORS.green}}>Skip</Text>
-        </TouchableOpacity> */}
+         <Text style={{fontFamily:FONT.semiBold,fontSize:16,color:COLORS.black}}>
+            Create an account</Text>
+        <TouchableOpacity>
+    {/* <Text style={{ fontFamily:FONT.bold, color:COLORS.green}}></Text> */}
+        </TouchableOpacity>
             </View>
            
         <View style={styles.bigGreen}>
@@ -101,7 +103,7 @@ container:{
     // marginHorizontal: 15,
 },
 bigGreen:{
-    marginTop:25,
+    marginTop:15,
     marginLeft:-15,
     height:843,
     width:425,

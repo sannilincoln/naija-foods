@@ -44,7 +44,7 @@ const Menu = () => {
             <TextInput
             placeholder={'Restaurant, Food'}
             onChangeText={() =>{}}
-            value={''}
+            // value={''}
             style={styles.txtbox}
             />
         </View>
@@ -71,12 +71,18 @@ const Menu = () => {
            />
            <CatButtons
            title={'Swallow'}
+           extContStyle={{backgroundColor:COLORS.gray}}
+           exttxtStyle={{color:COLORS.black}}
            />
            <CatButtons
            title={'Soups'}
+           extContStyle={{backgroundColor:COLORS.gray}}
+           exttxtStyle={{color:COLORS.black}}
            />
            <CatButtons
            title={'Vegetable'}
+           extContStyle={{backgroundColor:COLORS.gray}}
+           exttxtStyle={{color:COLORS.black}}
            />
 
            </View>
@@ -174,11 +180,17 @@ textB:{
   flexDirection:'row',
   alignItems:'center',
   borderRadius:10,
-  marginVertical:15
+  marginVertical:15,
+   shadowColor: COLORS.black,
+ shadowOffset: { width: 0, height: 3,},
+  shadowOpacity: 0.27,
+  shadowRadius: 4.65,
+  elevation: 10
 },
 txtbox:{
   height:40,
-  width:300
+  width:300,
+ 
 },
  boxa:{
         height:40,

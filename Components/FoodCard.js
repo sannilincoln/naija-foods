@@ -11,13 +11,13 @@ import { Entypo } from '@expo/vector-icons';
 const FoodCard = ({restaurant,food,price,star,image}) => {
   return (
     <View style={styles.contaner}>
-      <View style={{flexDirection:'row'}}>
+      <View style={styles.foodCont}>
         <Image
           style={styles.image}
           source={image}
           resizeMode={'cover'}
           />
-          <View >
+          <View style={{marginTop:15}}>
           <Text style={styles.title}> {restaurant} </Text>
           <Text style={styles.title}> {food}</Text>
           <Text style={styles.title}> {`$${price}`}</Text>
@@ -45,17 +45,21 @@ contaner:{
 height:115,
 width:208,
 borderRadius:10,
-shadowColor: '#517F241A',
-shadowOffset: {width: 0, height: 8},
-shadowOpacity: 0.2,
-elevation: 25,
+backgroundColor:COLORS.white,
+
+   shadowColor: COLORS.black,
+    shadowOffset: { width: 0, height: 3},
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 8
 
 
 },
 
 image:{
+  width:112,
 height:94,
-width:112,
+margin:9,
 borderRadius:10
 },
 title:{
@@ -63,7 +67,7 @@ title:{
     color:COLORS.black,
     fontSize:12,
     marginVertical:3,
-    marginLeft:5
+    marginLeft:-7
 },
 
 hrt:{
@@ -85,12 +89,18 @@ left:170
      alignItems:'center',
     justifyContent:'center',
     position:'absolute',
-   top:60,
-  right:180
+   top:68,
+  right:175
 },
 rating:{
     fontFamily:FONT.semiBold,
     fontSize:10,
     
-    }
+    },
+  foodCont:{
+    flexDirection:'row', 
+    // borderRadius:10,
+ 
+}
+  
 })

@@ -9,6 +9,7 @@ import SignUp from "../Screens/SignUp";
 import Verification from "../Screens/Verification";
 import SignIn from "../Screens/SignIn";
 import Menu from "../Screens/Menu";
+import TabNav from "./TabNav";
 
 const Stack = createStackNavigator();
 
@@ -21,7 +22,7 @@ const  MyStack = (navigation) =>{
       <Stack.Screen name="Sign Up" component={SignUp} options={{headerShown:false}}/>
       <Stack.Screen name="Verification" component={Verification} options={{headerShown:false}}/>
       <Stack.Screen name="Sign In" component={SignIn} options={{headerShown:false}}/>
-      <Stack.Screen name="Menu" component={Menu} options={{headerShown:false}}/>
+      <Stack.Screen name="Menu" component={TabNav} options={{headerShown:false}}/>
       
     </Stack.Navigator>
   );

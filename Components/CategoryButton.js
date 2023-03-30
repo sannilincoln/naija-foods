@@ -4,13 +4,13 @@ import React from 'react'
 
 import {FONT,COLORS} from '../constant/theme'
 
-const CatButtons = ({title,Onpress}) => {
+const CatButtons = ({title,onPress,extContStyle,exttxtStyle}) => {
     
   return (
     <TouchableOpacity
-    onPress={Onpress}
-    style={styles.container}>
-      <Text style={styles.Txt}>{title}</Text>
+    onPress={onPress}
+    style={[styles.container, extContStyle]}>
+      <Text style={[styles.Txt,exttxtStyle]}>{title}</Text>
     </TouchableOpacity>
   
   )

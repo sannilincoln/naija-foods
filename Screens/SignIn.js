@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet} from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity} from 'react-native'
 import React from 'react'
 
 
@@ -9,13 +9,13 @@ import HorizontalRule from '../Components/HorizontalRule';
 import SocialIcons from '../Components/SocialIcons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
     <SafeAreaView>
 
     <View style={styles.container}>
-      <Text style={{fontFamily:FONT.semiBold,fontSize:16,color:COLORS.black,marginVertical:6}}>
-            Create an account</Text>
+      <Text style={{fontFamily:FONT.semiBold,fontSize:16,color:COLORS.black,marginBottom:60}}>
+            Sign In</Text>
       
         <TextBox
         placeholder={'Phone Number'}
@@ -29,6 +29,7 @@ const SignIn = () => {
         
         <BigButton
         title={'Sign in'}
+        onPress={() => navigation.navigate('Menu')}
         />
 
         <Text style={styles.textf}>Forgot password?</Text>
@@ -38,14 +39,16 @@ const SignIn = () => {
 
         <SocialIcons/>
 
-        <View style={{marginTop:150}}>
+        <TouchableOpacity style={{marginTop:150}}
+        onPress={() => navigation.navigate('Sign Up')}
+        >
             <Text style={styles.txt}>Not registered yet ?  
 
                 <Text style={styles.signIn} > Sign up</Text>
             
             </Text>
 
-        </View>
+        </TouchableOpacity>
         
     </View>
 
@@ -59,7 +62,7 @@ export default SignIn
 const styles = StyleSheet.create({
 container:{
     // flex:1,
-    marginTop:100,
+    marginTop:25,
     // marginVertical: 25,
     // justifyContent:'center',
     alignItems:'center'
